@@ -1,0 +1,38 @@
+[
+    {
+        "image": "assets/ace.png",
+        "name":"Ace"
+    },
+      {
+        "image": "assets/five.png",
+        "name":"Five"
+    },
+    {
+        "image": "assets/jack.png",
+        "name":"Jack"
+    },
+    {
+        "image": "assets/joker.png",
+        "name":"Joker"
+    },
+    {
+        "image": "assets/nine.png",
+        "name":"Nine"
+    },
+    {
+        "image": "assets/queen.png",
+        "name":"Queen"
+    },
+    {
+        "image": "assets/seven.png",
+        "name":"Seven"
+    },
+    {
+        "image": "assets/ten.png",
+        "name":"Ten"
+    },
+    {
+        "image": "assets/two.png",
+        "name":"Two"
+    }
+]
