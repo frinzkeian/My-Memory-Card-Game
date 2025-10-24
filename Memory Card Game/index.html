@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+       <div class="status-bar">
+        <p>Score: <span class="score">0</span></p>
+        <p id="timer-container" style="display:none;">
+            Time: <span class="timer">60</span>
+        </p>
+    </div>
+    <h1>Memory Cards</h1>
+    <p class="author">Created by: Frinz Keian Periarce</p>
+    <p class="game-over-message">Time's Up Game Over!</p>
+    <p class="win-message">You Won!</p>
+    <div class="grid-container">
+    </div>
+        <div class="actions">
+            <button id="easy-btn">Easy</button>
+            <button id="hard-btn">Hard</button>
+            <button onclick="restart()">Restart</button>
+            <button id="music-toggle">🎵 Music On</button>
+        </div>
+        <script src="script.js"></script>
+</body>
+</html>
