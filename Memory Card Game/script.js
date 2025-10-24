@@ -74,6 +74,27 @@ fetch('data/cards.json')
         }
     }
 
+    function restart() {
+        buttonSound.play();
+        document.querySelector('.win-message').style.display = "none";
+        const winMessage = document.querySelector(".win-message");
+        winMessage.style.display = "none";
+
+        clearInterval(timeInterval);
+        timeStarted = false;
+        timeLeft = (difficulty === 'easy') ? 60 : 45;
+        document.getElementById("timer-container").style.display = "none";
+        document.querySelector(".score").textContent = score;
+
+        resetBoard();
+        score = 0;
+        document.querySelector(".score").textContent = score;
+        gridContainer.innerHTML = "";
+        shuffleCards();
+        generateCards();
+}
+
+
     function generateCards() {
         for (let card of cards) {
             const cardElement = document.createElement("div")
@@ -195,21 +216,4 @@ function startTimer() {
             }, 3000);
         }
     }, 1000);
-}
-
-function restart() {
-    buttonSound.play();
-    document.querySelector('.win-message').style.display = "none";
-    const winMessage = document.querySelector(".win-message");
-    winMessage.style.display = "none";
-    resetBoard();
-    shuffleCards();
-    score = 0;
-    document.querySelector(".score").textContent = score;
-    gridContainer.innerHTML = "";
-    generateCards();
-
-    clearInterval(timeInterval);
-    timeStarted = false;
-    document.getElementById("timer-container").style.display = "none";
 }
