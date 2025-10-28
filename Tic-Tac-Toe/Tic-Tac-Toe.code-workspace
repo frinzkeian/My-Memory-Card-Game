@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"name": "Tic-Tac-Toe",
+			"path": "."
+		},
+		{
+			"name": "Python",
+			"path": "../Python"
+		},
+		{
+			"name": "Memory Card Game",
+			"path": "../Memory Card Game"
+		},
+		{
+			"name": "French Opening",
+			"path": "../French Opening"
+		},
+		{
+			"name": "flappy bird",
+			"path": "../flappy bird"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "flappy bird"
+	}
+}

@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family:'Itim', cursive;
+}
+
+.background {
+    background-color: tan;
+    background-image:url('back.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding-top: 1px;  
+}
+
+.title {
+    color:black;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.display {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 300px;
+}
+
+.tile {
+    border: 1px solid black;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.playerX {
+    color: black;
+}
+
+.playerO {
+    color: white;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+#reset {
+    background-color: #FF3860;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    bottom: none;
+    font-size: 20px;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+.winningtile{
+    background-color: rgba(255, 255, 0, 0.6);
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 0 10px 5px gold;
+    transition: background-color 0.5s ease;
+}
+
+.tile span {
+    display: inline-block;
+    transform: scale(0);
+    animation: pop 0.5s forwards;
+}
+
+@keyframes pop {
+    to {
+        transform: scale(1);
+    }
+}
