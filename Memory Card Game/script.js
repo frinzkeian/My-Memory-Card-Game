@@ -40,6 +40,7 @@ document.getElementById('easy-btn').addEventListener('click', () => {
     buttonSound.play();
     difficulty = 'easy';
     timeLeft = 60;
+    updateDifficultyDisplay();
     restart();
 });
 
@@ -47,6 +48,7 @@ document.getElementById('hard-btn').addEventListener('click', () => {
     buttonSound.play();
     difficulty = 'hard';
     timeLeft = 45;
+    updateDifficultyDisplay();
     restart();
 });
 
@@ -74,6 +76,12 @@ fetch('data/cards.json')
         }
     }
 
+    function updateDifficultyDisplay() {
+    const diffLabel = document.querySelector(".difficulty-label");
+    diffLabel.textContent = `Mode: ${difficulty === 'easy' ? 'Easy 🟢' : 'Hard 🔴'}`;
+    }
+
+
     function restart() {
         buttonSound.play();
         document.querySelector('.win-message').style.display = "none";
@@ -93,7 +101,6 @@ fetch('data/cards.json')
         shuffleCards();
         generateCards();
 }
-
 
     function generateCards() {
         for (let card of cards) {
